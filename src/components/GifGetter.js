@@ -1,4 +1,5 @@
 import React from "react"
+import "../styles.css"
 
 class GifGetter extends React.Component {
   constructor() {
@@ -21,7 +22,7 @@ class GifGetter extends React.Component {
   }
 
   render() {
-    return (
+    return(
       <main>
         <h1>{this.state.randomCharacter.name}</h1>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1024px-Star_Wars_Logo.svg.png"/>
