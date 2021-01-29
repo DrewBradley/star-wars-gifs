@@ -1,0 +1,19 @@
+{
+  "name": "starwarsgif",
+  "version": "1.0.0",
+  "description": "Generate a Gif based on a Star Wars character.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DrewBradley/star-wars-gifs.git"
+  },
+  "author": "Drew Bradley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrewBradley/star-wars-gifs/issues"
+  },
+  "homepage": "https://github.com/DrewBradley/star-wars-gifs#readme"
+}
