@@ -7,7 +7,7 @@ class Header extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <header className="header">
         {/* <img src="https://starwarsblog.starwars.com/wp-content/uploads/sites/6/2015/11/rebel-symbol.jpg"/> */}
         <h1>Star Wars Gifs</h1>

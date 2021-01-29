@@ -2,6 +2,7 @@ import React from "react"
 import "../styles.css"
 import Header from "./Header"
 import GifGetter from "./GifGetter"
+import Footer from "./Footer"
 
 class App extends React.Component {
   constructor() {
@@ -10,12 +11,14 @@ class App extends React.Component {
 
     }
   }
+
   render() {
-    return(
-      <main>
+    return (
+      <div>
         <Header />
         <GifGetter />
-      </main>
+        <Footer />
+      </div>
     )
   }
 }
