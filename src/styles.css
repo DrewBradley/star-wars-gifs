@@ -42,3 +42,9 @@ button {
   transform: scale(3);
 }
 
+@media screen and (max-width: 600px) {
+  button {
+    transform: scale(1);
+    border: #FFE91A 5px solid;
+  }
+}
