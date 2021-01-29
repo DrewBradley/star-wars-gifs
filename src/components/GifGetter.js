@@ -37,7 +37,6 @@ class GifGetter extends React.Component {
         this.setState({ randomGif: gif }) 
       })
       .catch(err => console.log(err))
-    console.log("This Got Clicked", cleanName)
   }
 
   render() {
