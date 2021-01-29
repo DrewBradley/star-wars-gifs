@@ -13,7 +13,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -29,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/DrewBradley/star-wars-gifs/issues"
   },
-  "homepage": "http://localhost:3000/",
+  "homepage": "http://DrewBradley.github.io/star-wars-gifs",
   "browserslist": {
     "production": [
       ">0.2%",
