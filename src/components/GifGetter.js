@@ -58,7 +58,7 @@ class GifGetter extends React.Component {
         </section>
         <section className="slider-container">
           <button onClick={this.handClick}>Get a New Gif</button>
-          <p className="weird-meter">weird --------- weirder</p>
+          <p className="weird-meter">Weirdness: {this.state.weirdness}</p>
           <input  
             name="weirdness"
             type="range" 
