@@ -39,7 +39,39 @@ button {
   border: #FFE91A 2px solid;
   color: #FFE91A;
   background-color: black;
-  transform: scale(3);
+  margin-top: 5%;
+  transform: scale(2);
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.weird-meter {
+  margin-top: 5%;
+  font-size: 0.75rem;
+}
+
+.slider {
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 10%;
+  height: 25px;
+  background: #FFE91A;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {

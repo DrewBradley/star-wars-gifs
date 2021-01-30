@@ -7,9 +7,11 @@ class GifGetter extends React.Component {
     this.state = {
       SWCharacter: [],
       randomCharacter: "",
+      weirdness: 5,
       randomGif: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1024px-Star_Wars_Logo.svg.png"
     }
     this.handClick = this.handClick.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount() {
@@ -25,12 +27,20 @@ class GifGetter extends React.Component {
     const randomNum = Math.floor(Math.random() * this.state.SWCharacter.length)
     this.setState({ randomCharacter: this.state.SWCharacter[randomNum]})
     this.fetchGif(this.state.SWCharacter[randomNum])
+    console.log(this.state)
+  }
+
+  handleChange(event) {
+    const { name, value } = event.target
+    this.setState({
+      [name]: value
+    })
   }
   
   fetchGif(name) {
     const apiKey = "oa7cE1C08BLKdDxPCJpJgtc0uNLhijEc"
     const cleanName = (name.name).replace(/ /g, "-")
-    fetch("https://api.giphy.com/v1/gifs/translate?api_key=" + apiKey + "&s=" + cleanName)
+    fetch("https://api.giphy.com/v1/gifs/translate?api_key=" + apiKey + "&s=" + cleanName + "&weirdness=" + this.state.weirdness)
       .then(response => response.json())
       .then(data => {
         const gif = data.data.images.downsized.url
@@ -46,7 +56,18 @@ class GifGetter extends React.Component {
         <section className="gif-container">
           <img className="image" src={this.state.randomGif}/>
         </section>
-        <button onClick={this.handClick}>Get New Character</button>
+        <section className="slider-container">
+          <button onClick={this.handClick}>Get a New Gif</button>
+          <p className="weird-meter">weird --------- weirder</p>
+          <input  
+            name="weirdness"
+            type="range" 
+            min="1" max="10" 
+            value={this.state.weirdness}
+            className="slider" 
+            onChange={this.handleChange}
+            step="1"/>
+        </section>
       </main>
     )
   }
